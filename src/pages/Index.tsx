@@ -9,15 +9,12 @@ const Index = () => {
   const handleGetStarted = () => {
     setCurrentPage('login');
   };
-
   const handleLoginSuccess = () => {
     setCurrentPage('main');
   };
-
   const handleBackToLanding = () => {
     setCurrentPage('landing');
   };
-
   const handleBackToLogin = () => {
     setCurrentPage('login');
   };
