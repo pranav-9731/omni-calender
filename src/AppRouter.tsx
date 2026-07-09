@@ -1,56 +1,50 @@
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import Landing from './pages/Landing';
-import Login from './pages/Login';
-import Calendar from './pages/MainCalendar';
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Login from "./pages/Login";
+import Calendar from "./pages/MainCalendar";
 
-export const AppRouter = () => {
-    const navigate = useNavigate();
-
-    const handleGetStarted = () => {
-    navigate('/login');
-  };
-
-  const handleLoginSuccess = () => {
-    navigate('/calendar');
-  };
-
-  const handleBackToLanding = () => {
-
-    navigate('/');
-  };
-
-  const handleBackToLogin = () => {
-    navigate('/login');
-  };
+const RouterContent = () => {
+  const navigate = useNavigate();
 
   return (
     <Routes>
-      <Route 
-        path="/" 
-        element={<Landing onGetStarted={handleGetStarted} />} 
-      />
-      <Route 
-        path="/login" 
+      <Route
+        path="/"
         element={
-          <Login 
-            onLoginSuccess={handleLoginSuccess}
-            onBackToLanding={handleBackToLanding}
+          <Landing
+            onGetStarted={() => navigate("/login")}
           />
-        } 
+        }
       />
-      <Route 
-        path="/calendar" 
-        element={<Calendar onBackToLogin={handleBackToLogin} />} 
+
+      <Route
+        path="/login"
+        element={
+          <Login
+            onLoginSuccess={() => navigate("/calendar")}
+            onBackToLanding={() => navigate("/")}
+          />
+        }
+      />
+
+      <Route
+        path="/calendar"
+        element={
+          <Calendar
+            onBackToLogin={() => navigate("/login")}
+          />
+        }
       />
     </Routes>
   );
 };
 
-// Main AppRouter component
-export const App = () => {
+const AppRouter = () => {
   return (
     <BrowserRouter>
-      <App />
+      <RouterContent />
     </BrowserRouter>
   );
 };
+
+export default AppRouter;
