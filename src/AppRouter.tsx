@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
+
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Calendar from "./pages/MainCalendar";
 
-const RouterContent = () => {
+export const AppRouter = () => {
   const navigate = useNavigate();
 
   return (
@@ -36,14 +37,6 @@ const RouterContent = () => {
         }
       />
     </Routes>
-  );
-};
-
-const AppRouter = () => {
-  return (
-    <BrowserRouter>
-      <RouterContent />
-    </BrowserRouter>
   );
 };
 
