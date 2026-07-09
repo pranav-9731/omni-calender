@@ -9,12 +9,15 @@ const Index = () => {
   const handleGetStarted = () => {
     setCurrentPage('login');
   };
+
   const handleLoginSuccess = () => {
     setCurrentPage('main');
   };
+
   const handleBackToLanding = () => {
     setCurrentPage('landing');
   };
+
   const handleBackToLogin = () => {
     setCurrentPage('login');
   };
@@ -29,7 +32,8 @@ const Index = () => {
         )}
         {currentPage === 'login' && (
           <div className="animate-fade-in">
-            <Login onLoginSuccess={handleLoginSuccess} onBackToLanding={handleBackToLanding} />
+            <Login onLoginSuccess={handleLoginSuccess} onBackToLanding={handleBackToLanding}
+             />
           </div>
         )}
         {currentPage === 'main' && (

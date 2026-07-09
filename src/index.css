@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 262 83% 58%;
+    --primary: 240 69% 58%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 240 4.8% 95.9%;
@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Enhanced color palette */
-    --primary-glow: 262 90% 70%;
+    --primary-glow: 27 80% 70%;
     --primary-dark: 262 70% 45%;
     --success: 142 76% 36%;
     --warning: 38 92% 50%;
@@ -47,7 +47,7 @@ All colors MUST be HSL.
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--info)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240, 69%, 58%) 0%, hsl(195, 57%, 60%) 30%, hsl(0 0% 90%) 70%, hsl(0 0% 100%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--accent)) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--accent)/0.3) 100%);
     
@@ -111,7 +111,7 @@ All colors MUST be HSL.
     
     /* Dark gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--info)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 80% 25%) 0%, hsl(25 85% 35%) 30%, hsl(0 0% 80%) 70%, hsl(0 0% 90%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--accent)) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--accent)/0.3) 100%);
     
